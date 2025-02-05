@@ -65,3 +65,68 @@ title @p[tag=ingame,scores={player_health=47}] actionbar "\uF81D\uF81D\uF81B\uF8
 title @p[tag=ingame,scores={player_health=48}] actionbar "\uF81D\uF81D\uF81B\uF802\uE048"
 title @p[tag=ingame,scores={player_health=49}] actionbar "\uF81D\uF81D\uF81B\uF802\uE049"
 title @p[tag=ingame,scores={player_health=50}] actionbar "\uF81D\uF81D\uF81B\uF802\uE050"
+
+# 51-60
+
+title @p[tag=ingame,scores={player_health=51}] actionbar "\uF81D\uF81D\uF81B\uF802\uE051"
+title @p[tag=ingame,scores={player_health=52}] actionbar "\uF81D\uF81D\uF81B\uF802\uE052"
+title @p[tag=ingame,scores={player_health=53}] actionbar "\uF81D\uF81D\uF81B\uF802\uE053"
+title @p[tag=ingame,scores={player_health=54}] actionbar "\uF81D\uF81D\uF81B\uF802\uE054"
+title @p[tag=ingame,scores={player_health=55}] actionbar "\uF81D\uF81D\uF81B\uF802\uE055"
+title @p[tag=ingame,scores={player_health=56}] actionbar "\uF81D\uF81D\uF81B\uF802\uE056"
+title @p[tag=ingame,scores={player_health=57}] actionbar "\uF81D\uF81D\uF81B\uF802\uE057"
+title @p[tag=ingame,scores={player_health=58}] actionbar "\uF81D\uF81D\uF81B\uF802\uE058"
+title @p[tag=ingame,scores={player_health=59}] actionbar "\uF81D\uF81D\uF81B\uF802\uE059"
+title @p[tag=ingame,scores={player_health=60}] actionbar "\uF81D\uF81D\uF81B\uF802\uE060"
+
+# 61-70
+
+title @p[tag=ingame,scores={player_health=61}] actionbar "\uF81D\uF81D\uF81B\uF802\uE061"
+title @p[tag=ingame,scores={player_health=62}] actionbar "\uF81D\uF81D\uF81B\uF802\uE062"
+title @p[tag=ingame,scores={player_health=63}] actionbar "\uF81D\uF81D\uF81B\uF802\uE063"
+title @p[tag=ingame,scores={player_health=64}] actionbar "\uF81D\uF81D\uF81B\uF802\uE064"
+title @p[tag=ingame,scores={player_health=65}] actionbar "\uF81D\uF81D\uF81B\uF802\uE065"
+title @p[tag=ingame,scores={player_health=66}] actionbar "\uF81D\uF81D\uF81B\uF802\uE066"
+title @p[tag=ingame,scores={player_health=67}] actionbar "\uF81D\uF81D\uF81B\uF802\uE067"
+title @p[tag=ingame,scores={player_health=68}] actionbar "\uF81D\uF81D\uF81B\uF802\uE068"
+title @p[tag=ingame,scores={player_health=69}] actionbar "\uF81D\uF81D\uF81B\uF802\uE069"
+title @p[tag=ingame,scores={player_health=70}] actionbar "\uF81D\uF81D\uF81B\uF802\uE070"
+
+# 71-80
+
+title @p[tag=ingame,scores={player_health=71}] actionbar "\uF81D\uF81D\uF81B\uF802\uE071"
+title @p[tag=ingame,scores={player_health=72}] actionbar "\uF81D\uF81D\uF81B\uF802\uE072"
+title @p[tag=ingame,scores={player_health=73}] actionbar "\uF81D\uF81D\uF81B\uF802\uE073"
+title @p[tag=ingame,scores={player_health=74}] actionbar "\uF81D\uF81D\uF81B\uF802\uE074"
+title @p[tag=ingame,scores={player_health=75}] actionbar "\uF81D\uF81D\uF81B\uF802\uE075"
+title @p[tag=ingame,scores={player_health=76}] actionbar "\uF81D\uF81D\uF81B\uF802\uE076"
+title @p[tag=ingame,scores={player_health=77}] actionbar "\uF81D\uF81D\uF81B\uF802\uE077"
+title @p[tag=ingame,scores={player_health=78}] actionbar "\uF81D\uF81D\uF81B\uF802\uE078"
+title @p[tag=ingame,scores={player_health=79}] actionbar "\uF81D\uF81D\uF81B\uF802\uE079"
+title @p[tag=ingame,scores={player_health=80}] actionbar "\uF81D\uF81D\uF81B\uF802\uE080"
+
+# 81-90
+
+title @p[tag=ingame,scores={player_health=81}] actionbar "\uF81D\uF81D\uF81B\uF802\uE081"
+title @p[tag=ingame,scores={player_health=82}] actionbar "\uF81D\uF81D\uF81B\uF802\uE082"
+title @p[tag=ingame,scores={player_health=83}] actionbar "\uF81D\uF81D\uF81B\uF802\uE083"
+title @p[tag=ingame,scores={player_health=84}] actionbar "\uF81D\uF81D\uF81B\uF802\uE084"
+title @p[tag=ingame,scores={player_health=85}] actionbar "\uF81D\uF81D\uF81B\uF802\uE085"
+title @p[tag=ingame,scores={player_health=86}] actionbar "\uF81D\uF81D\uF81B\uF802\uE086"
+title @p[tag=ingame,scores={player_health=87}] actionbar "\uF81D\uF81D\uF81B\uF802\uE087"
+title @p[tag=ingame,scores={player_health=88}] actionbar "\uF81D\uF81D\uF81B\uF802\uE088"
+title @p[tag=ingame,scores={player_health=89}] actionbar "\uF81D\uF81D\uF81B\uF802\uE089"
+title @p[tag=ingame,scores={player_health=90}] actionbar "\uF81D\uF81D\uF81B\uF802\uE090"
+
+# 91-100
+
+title @p[tag=ingame,scores={player_health=91}] actionbar "\uF81D\uF81D\uF81B\uF802\uE091"
+title @p[tag=ingame,scores={player_health=92}] actionbar "\uF81D\uF81D\uF81B\uF802\uE092"
+title @p[tag=ingame,scores={player_health=93}] actionbar "\uF81D\uF81D\uF81B\uF802\uE093"
+title @p[tag=ingame,scores={player_health=94}] actionbar "\uF81D\uF81D\uF81B\uF802\uE094"
+title @p[tag=ingame,scores={player_health=95}] actionbar "\uF81D\uF81D\uF81B\uF802\uE095"
+title @p[tag=ingame,scores={player_health=96}] actionbar "\uF81D\uF81D\uF81B\uF802\uE096"
+title @p[tag=ingame,scores={player_health=97}] actionbar "\uF81D\uF81D\uF81B\uF802\uE097"
+title @p[tag=ingame,scores={player_health=98}] actionbar "\uF81D\uF81D\uF81B\uF802\uE098"
+title @p[tag=ingame,scores={player_health=99}] actionbar "\uF81D\uF81D\uF81B\uF802\uE099"
+title @p[tag=ingame,scores={player_health=100}] actionbar "\uF81D\uF81D\uF81B\uF802\uE100"

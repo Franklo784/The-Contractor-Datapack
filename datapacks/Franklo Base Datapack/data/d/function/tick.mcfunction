@@ -52,3 +52,7 @@ execute unless score @p dj_time matches 0.. run scoreboard players set @a dj_tim
 
 execute as @a unless score @s player_health matches 0.. run scoreboard players set @s player_health 100
 execute as @a unless score @s player_invul matches 0.. run scoreboard players set @s player_invul 0
+
+# Others
+
+scoreboard players set @a[scores={player_health=101..}] player_health 100
