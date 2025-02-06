@@ -60,7 +60,82 @@ execute as @e[tag=wpn_interaction] on target if entity @s[nbt={SelectedItem:{com
 execute as @e[tag=wpn_interaction] on target if entity @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{Pistol:1b}}}},tag=sliding] at @s positioned ~ ~.8 ~ unless score .pistol wpn_cooldown matches 1.. run function d:weapons/raycast/pistol
 execute as @e[tag=wpn_interaction] on target if entity @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{Pistol:1b}}}}] unless score .pistol wpn_cooldown matches 1.. run scoreboard players set .pistol wpn_cooldown 10
 
+execute if score .pistol wpn_pierce matches 1.. run scoreboard players reset .pistol wpn_pierce
 execute if score .pistol wpn_cooldown matches 1.. run scoreboard players remove .pistol wpn_cooldown 1
+
+#> SG MKII (Machinegun/Rifle)
+
+# Display
+
+execute at @a if entity @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{Machinegun:1b}}}},tag=ingame] unless entity @e[tag=machinegun_model] run function animated_java:machinegun/summon {args:1}
+execute at @a if entity @a[tag=ingame] unless entity @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{Machinegun:1b}}}}] run function animated_java:machinegun/remove/all
+execute unless entity @a[tag=ingame] run function animated_java:machinegun/remove/all
+execute as @a[tag=!sliding] at @s positioned ~ ~1.2 ~ run tp @e[tag=machinegun_model] ^ ^ ^.8 ~ ~
+execute as @a[tag=sliding] at @s positioned ~ ~.5 ~ run tp @e[tag=machinegun_model] ^ ^ ^1.5 ~ ~
+
+execute as @e[tag=machinegun_model,tag=model_init] run function animated_java:machinegun/animations/idle/play
+tag @e[tag=machinegun_model,tag=model_init] remove model_init
+
+# Main Fire
+
+execute as @e[tag=wpn_interaction] on target if entity @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{Machinegun:1b}}}}] as @e[tag=machinegun_model] unless score .machinegun wpn_cooldown matches 1.. run function animated_java:machinegun/animations/shoot/play
+execute as @e[tag=wpn_interaction] on target if entity @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{Machinegun:1b}}}}] at @s unless score .machinegun wpn_cooldown matches 1.. run playsound weapon.machinegun.ready player @s ~ ~ ~ 1 1 1
+execute as @e[tag=wpn_interaction] on target if entity @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{Machinegun:1b}}}}] unless score .machinegun wpn_cooldown matches 1.. run scoreboard players set .machinegun wpn_cooldown 50
+
+execute if score .machinegun wpn_cooldown matches 1.. run scoreboard players remove .machinegun wpn_cooldown 1
+execute if score .machinegun wpn_cooldown matches 1.. unless entity @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{Machinegun:1b}}}}] run scoreboard players set .machinegun wpn_cooldown 3
+
+execute as @a at @s if score .machinegun wpn_cooldown matches 26 run playsound weapon.machinegun.fire player @s ~ ~ ~ .5 2 1
+execute at @a[tag=!sliding] if score .machinegun wpn_cooldown matches 26 run summon marker ~ ~1.5 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+execute at @a[tag=sliding] if score .machinegun wpn_cooldown matches 26 run summon marker ~ ~.8 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+
+execute as @a at @s if score .machinegun wpn_cooldown matches 24 run playsound weapon.machinegun.fire player @s ~ ~ ~ .5 2 1
+execute at @a[tag=!sliding] if score .machinegun wpn_cooldown matches 24 run summon marker ~ ~1.5 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+execute at @a[tag=sliding] if score .machinegun wpn_cooldown matches 24 run summon marker ~ ~.8 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+
+execute as @a at @s if score .machinegun wpn_cooldown matches 22 run playsound weapon.machinegun.fire player @s ~ ~ ~ .5 2 1
+execute at @a[tag=!sliding] if score .machinegun wpn_cooldown matches 22 run summon marker ~ ~1.5 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+execute at @a[tag=sliding] if score .machinegun wpn_cooldown matches 22 run summon marker ~ ~.8 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+
+execute as @a at @s if score .machinegun wpn_cooldown matches 20 run playsound weapon.machinegun.fire player @s ~ ~ ~ .5 2 1
+execute at @a[tag=!sliding] if score .machinegun wpn_cooldown matches 20 run summon marker ~ ~1.5 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+execute at @a[tag=sliding] if score .machinegun wpn_cooldown matches 20 run summon marker ~ ~.8 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+
+execute as @a at @s if score .machinegun wpn_cooldown matches 18 run playsound weapon.machinegun.fire player @s ~ ~ ~ .5 2 1
+execute at @a[tag=!sliding] if score .machinegun wpn_cooldown matches 18 run summon marker ~ ~1.5 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+execute at @a[tag=sliding] if score .machinegun wpn_cooldown matches 18 run summon marker ~ ~.8 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+
+execute as @a at @s if score .machinegun wpn_cooldown matches 16 run playsound weapon.machinegun.fire player @s ~ ~ ~ .5 2 1
+execute at @a[tag=!sliding] if score .machinegun wpn_cooldown matches 16 run summon marker ~ ~1.5 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+execute at @a[tag=sliding] if score .machinegun wpn_cooldown matches 16 run summon marker ~ ~.8 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+
+execute as @a at @s if score .machinegun wpn_cooldown matches 14 run playsound weapon.machinegun.fire player @s ~ ~ ~ .5 2 1
+execute at @a[tag=!sliding] if score .machinegun wpn_cooldown matches 14 run summon marker ~ ~1.5 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+execute at @a[tag=sliding] if score .machinegun wpn_cooldown matches 14 run summon marker ~ ~.8 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+
+execute as @a at @s if score .machinegun wpn_cooldown matches 12 run playsound weapon.machinegun.fire player @s ~ ~ ~ .5 2 1
+execute at @a[tag=!sliding] if score .machinegun wpn_cooldown matches 12 run summon marker ~ ~1.5 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+execute at @a[tag=sliding] if score .machinegun wpn_cooldown matches 12 run summon marker ~ ~.8 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+
+execute as @a at @s if score .machinegun wpn_cooldown matches 10 run playsound weapon.machinegun.fire player @s ~ ~ ~ .5 2 1
+execute at @a[tag=!sliding] if score .machinegun wpn_cooldown matches 10 run summon marker ~ ~1.5 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+execute at @a[tag=sliding] if score .machinegun wpn_cooldown matches 10 run summon marker ~ ~.8 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+
+execute as @a at @s if score .machinegun wpn_cooldown matches 8 run playsound weapon.machinegun.fire player @s ~ ~ ~ .5 2 1
+execute at @a[tag=!sliding] if score .machinegun wpn_cooldown matches 8 run summon marker ~ ~1.5 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+execute at @a[tag=sliding] if score .machinegun wpn_cooldown matches 8 run summon marker ~ ~.8 ~ {Tags:["projectile","player_projectile","machinegun_bullet"]}
+
+execute as @a at @s if score .machinegun wpn_cooldown matches 4 run playsound weapon.machinegun.reload player @s ~ ~ ~ .5 0 1
+
+# Bullets
+
+execute as @a[tag=!sliding] at @s run tp @e[tag=machinegun_bullet,scores={projectile_lifetime=1..2}] ~ ~1.5 ~ ~ ~
+execute as @a[tag=sliding] at @s run tp @e[tag=machinegun_bullet,scores={projectile_lifetime=1..2}] ~ ~.8 ~ ~ ~
+execute as @e[tag=machinegun_bullet] at @s run tp @s ^ ^ ^.85
+execute at @e[tag=machinegun_bullet] run particle dust_color_transition{from_color:[0,1,1],scale:1.35,to_color:[0.8,0.8,1.0]} ~ ~ ~ .1 .1 .1 0 5 force
+
+execute as @e[tag=machinegun_bullet] at @s unless block ~ ~ ~ #translucent run kill @s
+kill @e[tag=machinegun_bullet,scores={projectile_lifetime=20..}]
 
 #> All
 

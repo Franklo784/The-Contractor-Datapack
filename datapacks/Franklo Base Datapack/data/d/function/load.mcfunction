@@ -2,6 +2,8 @@
 
 scoreboard objectives add hunger food
 
+scoreboard objectives add projectile_lifetime dummy
+
 scoreboard objectives add dash_cooldown dummy
 scoreboard objectives add dash_time dummy
 scoreboard objectives add stamina dummy
@@ -19,3 +21,10 @@ scoreboard objectives add sword_cooldown dummy
 scoreboard objectives add player_health dummy
 scoreboard objectives add player_invul dummy
 scoreboard objectives add wpn_cooldown dummy
+scoreboard objectives add wpn_pierce dummy
+
+scoreboard objectives add enemy_health dummy
+
+scoreboard objectives add pistol_invul dummy
+scoreboard objectives add machinegun_invul dummy
+scoreboard objectives add machinegun_alt_invul dummy

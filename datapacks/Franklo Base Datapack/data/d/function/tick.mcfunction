@@ -15,6 +15,12 @@ attribute @p[tag=!ingame] jump_strength base set 0.41999998688697815
 attribute @p[tag=!ingame] water_movement_efficiency base set 0
 attribute @p[tag=!ingame] safe_fall_distance base set 3
 
+#> Health Stuff
+
+execute unless score @p player_health matches 1..15 run worldborder warning distance 0
+execute if score @p player_health matches 6..15 run worldborder warning distance 80000000
+execute if score @p player_health matches 1..5 run worldborder warning distance 999999999
+
 #> Item Kills
 
 kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{Weapons:1b}}}}]
@@ -22,6 +28,8 @@ kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{Weapons:1b}}}}
 #> Scoreboards
 
 # Players Add
+
+scoreboard players add @e[tag=projectile] projectile_lifetime 1
 
 scoreboard players add @a[scores={stamina=..119},tag=!sliding] stamina 1
 
@@ -36,6 +44,10 @@ scoreboard players remove @a[scores={dj_time=1..}] dj_time 1
 scoreboard players remove @a[scores={sword_cooldown=1..}] sword_cooldown 1
 
 scoreboard players remove @a[scores={player_invul=1..}] player_invul 1
+
+scoreboard players remove @a[scores={pistol_invul=1..}] pistol_invul 1
+scoreboard players remove @a[scores={machinegun_invul=1..}] machinegun_invul 1
+scoreboard players remove @a[scores={machinegun_alt_invul=1..}] machinegun_alt_invul 1
 
 # Make Sure score exists
 
@@ -52,6 +64,10 @@ execute unless score @p dj_time matches 0.. run scoreboard players set @a dj_tim
 
 execute as @a unless score @s player_health matches 0.. run scoreboard players set @s player_health 100
 execute as @a unless score @s player_invul matches 0.. run scoreboard players set @s player_invul 0
+
+execute as @e[tag=enemy] unless score @s pistol_invul matches 0.. run scoreboard players set @s pistol_invul 0
+execute as @e[tag=enemy] unless score @s machinegun_invul matches 0.. run scoreboard players set @s machinegun_invul 0
+execute as @e[tag=enemy] unless score @s machinegun_alt_invul matches 0.. run scoreboard players set @s machinegun_alt_invul 0
 
 # Others
 
