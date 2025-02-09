@@ -1,4 +1,4 @@
-execute unless block ~ ~-1 ~ #translucent run tag @a add epic_dj
+execute unless block ~ ~-1 ~ #translucent run tag @p add epic_dj
 execute unless block ~ ~-1 ~ #translucent run playsound item.trident.thunder player @s ~ ~ ~ 0.5 2 1
 execute if block ~ ~-1 ~ #translucent run effect give @s levitation 1 14 true
 execute unless block ~ ~-1 ~ #translucent run effect give @s levitation 1 19 true
