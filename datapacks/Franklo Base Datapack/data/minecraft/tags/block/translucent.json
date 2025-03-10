@@ -42,6 +42,9 @@
    "minecraft:soul_fire",
 "#minecraft:portals",
 "#minecraft:pressure_plates",
-"snow"
+"snow",
+"#cave_vines",
+"pale_hanging_moss",
+"light"
    ]
 }
